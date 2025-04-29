@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Login Page{% endblock %}
+
+{% block main-content %}
+
+<div class="center">
+    <form method="POST" action="" class="login-form">
+        {% csrf_token %}
+        <div class="title">Register</div>
+        <span class="inputs">
+            <span class="inputf">
+                <input type="text" name="username" class="input" placeholder="Username" />
+                <span class="label">Username</span>
+                <span class="material-icons icon">person</span>
+            </span>
+            <span class="inputf">
+                <input type="text" name="name" class="input" placeholder="Name" />
+                <span class="label">Name</span>
+                <span class="material-icons icon">face</span>
+            </span>
+            <span class="inputf">
+                <select name="gender" class="select">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <span class="material-icons icon">wc</span>
+            </span>
+
+            <span class="inputf">
+                <input type="tel" name="phone" class="input" placeholder="Phone Number" />
+                <span class="label">Phone Number</span>
+                <span class="material-icons icon">smartphone</span>
+            </span>
+            <span class="inputf">
+                <input type="email" name="email" class="input" placeholder="Email" />
+                <span class="label">Email</span>
+                <span class="material-icons icon">mail</span>
+            </span>
+            <span class="inputf">
+                <input type="password" name="password" class="input" placeholder="Password" />
+                <span class="label">Password</span>
+                <span class="material-icons icon">lock</span>
+            </span>
+        </span>
+        <button type="submit" class="btn">
+            <span>Register</span>
+        </button>
+        <div class="reglog">
+            <a href="{% url 'login' %}">Login</a>
+        </div>
+        <div class="message">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert">{{ message }}</div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </form>
+</div>
+
+{% endblock main-content %}

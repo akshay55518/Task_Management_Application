@@ -1,0 +1,102 @@
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.container-top .left h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.container-top .right .btn {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container-top .right .btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.container-top .right .btn:hover {
+    background-color: #c0392b;
+}
+
+/* Table styling */
+.your-tasks {
+    margin-top: 20px;
+}
+
+.your-tasks h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.your-tasks table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.your-tasks th, 
+.your-tasks td {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.your-tasks th {
+    background-color: #f1f1f1;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.your-tasks td {
+    font-size: 15px;
+}
+
+.your-tasks .btn-status {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #3498dba1;
+    color: white;
+    font-weight: 600;
+    cursor: not-allowed;
+}
+
+.btn-update {
+    padding: 8px 14px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+    background-color: #1e8449;
+}

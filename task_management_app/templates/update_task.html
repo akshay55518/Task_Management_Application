@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Edit Page{% endblock %}
+
+{% block main-content %}
+<div class="update-task">
+    <h2>Edit Task</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Status</label>
+        <select name="status" required>
+            <option value="Pending" {% if task.status == "Pending" %}selected{% endif %}>Pending</option>
+            <option value="In Progress" {% if task.status == "In Progress" %}selected{% endif %}>In Progress</option>
+            <option value="Completed" {% if task.status == "Completed" %}selected{% endif %}>Completed</option>
+            <option value="On Hold" {% if task.status == "On Hold" %}selected{% endif %}>On Hold</option>
+        </select>
+
+        <label>Worked Hours</label>
+        <input type="number" step="0.01" name="worked_hours" value="{{ task.worked_hours }}">
+
+        <label>Completion Report</label>
+        <textarea name="completion_report">{{ task.completion_report }}</textarea>
+
+        <button type="submit">Update Task</button>
+    </form>
+</div>
+
+{% endblock main-content %}
